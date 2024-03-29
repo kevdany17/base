@@ -61,37 +61,35 @@
                                     $role_permissions = (isset($dataTypeContent)) ? $dataTypeContent->permissions->pluck('key')->toArray() : [];
                                 ?>
                                 @foreach(Voyager::model('Permission')->all()->groupBy('display_name') as $table => $permission)
-                                  @if(($table == 'menus' || $table == 'settings') && Auth::user()->role->id != 1)
+                                  @if(($table == 'menús' || $table == 'configuraciones') && Auth::user()->role->id != 1)
                                     @continue
                                   @endif
-
                                     <li>
                                         <input type="checkbox" id="{{$table}}" class="permission-group">
-                                        <label for="{{$table}}"><strong>{{\Illuminate\Support\Str::title($table)}}</strong></label>
+                                        <label for="{{$table}}"><strong>{{\Illuminate\Support\Str::title(str_replace('_',' ', $table))}}</strong></label>
                                         <ul>
                                             @foreach($permission as $perm)
-                                                @if($perm->key == 'browse_admin' && Auth::user()->role->id != 1)
+                                                @if($perm->key == 'browse_admin' && Auth::user()->role->id !=1)
                                                   <li>
                                                       <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" checked readonly>
-                                                      <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title('buscar administrador')}}</label>
+                                                      <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title('Panel administrador')}}</label>
                                                   </li>
                                                   @break
                                                 @endif
                                                 @php
-                                                $translations = [
-                                                'browse' => 'buscar',
-                                                'read' => 'leer',
-                                                'edit' => 'editar',
-                                                'add' => 'agregar',
-                                                'delete' => 'eliminar',
-                                                ];
+                                                    $translations = [
+                                                        'browse' => 'buscar',
+                                                        'read' => 'leer',
+                                                        'edit' => 'editar',
+                                                        'add' => 'agregar',
+                                                        'delete' => 'eliminar',
+                                                    ];
 
                                                     $permissions_key=$perm->key;
                                                     $array_keys=explode('_',$permissions_key);
                                                     $array_keys[0]=$translations[$array_keys[0]];
                                                     $display_name=$array_keys[0].' '.$perm->display_name;
                                                 @endphp
-
                                                 <li>
                                                   <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" @if(in_array($perm->key, $role_permissions)) checked @endif>
                                                   <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title($display_name)}}</label>

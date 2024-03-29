@@ -15,6 +15,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "impulzo/rest_client_service": "*",
         "laravel/framework": "^8.0",
+		"laravel/sanctum": "^2.15",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.4",
         "luecano/numero-a-letras": "^3.0",

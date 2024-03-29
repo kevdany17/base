@@ -1,37 +1,48 @@
 {
-    "extends": [
-        "airbnb-typescript/base",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "plugins": ["@typescript-eslint", "import"],
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true
-    },
-    "rules": {
-        "indent": ["error", "tab",  { "SwitchCase": 1 }],
-		"@typescript-eslint/indent": ["error", "tab",  { "SwitchCase": 1 }],
-        "quotes": ["error", "double"],
-        "@typescript-eslint/quotes": ["error", "double"],
-		"import/extensions": ["error", {
-			"tsx": "never",
-			"js": "never",
-			"jsx": "never"
-		}],
-        "no-unused-vars": "error",
-        "no-console": "error",
-        "no-undef": "error",
-        "no-extra-semi": "error",
-        "no-trailing-spaces": "error",
-        "@typescript-eslint/no-explicit-any": "error",
-        "@typescript-eslint/no-unused-vars": "error",
-        "@typescript-eslint/no-use-before-define": "error",
+	"extends": [
+		"airbnb-typescript/base",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint", "import"],
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	},
+	"rules": {
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
+		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1 }],
+		"quotes": ["error", "double"],
+		"@typescript-eslint/quotes": ["error", "double"],
+		"import/extensions": [
+			"error",
+			{
+				"tsx": "never",
+				"js": "never",
+				"jsx": "never"
+			}
+		],
+		"no-unused-vars": "error",
+		"no-console": "error",
+		"no-undef": "error",
+		"no-extra-semi": "error",
+		"no-trailing-spaces": "error",
+		"@typescript-eslint/no-explicit-any": "error",
+		"@typescript-eslint/no-unused-vars": "error",
+		"@typescript-eslint/no-use-before-define": "error",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": false,
+				"optionalDependencies": false,
+				"peerDependencies": false
+			}
+		],
 		"@typescript-eslint/no-misused-promises": [
 			"error",
 			{
@@ -40,6 +51,5 @@
 				}
 			}
 		]
-    }
+	}
 }
-
