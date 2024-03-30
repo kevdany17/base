@@ -14,7 +14,7 @@ class AddDisplayNameColumnToPermissionTable extends Migration
     public function up()
     {
         Schema::table('permissions', function (Blueprint $table) {
-            $table->string('display_name')->nullable();
+            $table->string('display_name')->after('table_name')->nullable();
         });
     }
 

@@ -175,11 +175,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\TelescopeServiceProvider::class,
         App\Providers\NotificationServiceProvider::class,
 
         //iSeed
         Orangehill\Iseed\IseedServiceProvider::class,
-        
+
         //Migrations Generator
         \KitLoong\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
 
@@ -187,7 +188,10 @@ return [
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
         //Rest Client Impulzo
-        \Impulzo\RestClientService\RestClientServiceProvider::class
+        \Impulzo\RestClientService\RestClientServiceProvider::class,
+
+		//Telescope
+		Laravel\Telescope\TelescopeServiceProvider::class,
 
     ],
 
