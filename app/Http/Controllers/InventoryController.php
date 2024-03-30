@@ -22,7 +22,7 @@ class InventoryController extends VoyagerBaseController
     public function store(Request $request)
     {
         try {
-            $this->storeService->execute($request->json);
+            $this->storeService->run($request->json);
         } catch (Exception $ex) {
             $data = [
                 'message'    => "No fue posible registrar los movimientos de inventario",
