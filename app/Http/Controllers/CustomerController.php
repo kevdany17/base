@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Impulzo\RestClientService\Libraries\Facade\RestClientFacade;
 use TCG\Voyager\Http\Controllers\VoyagerBaseController;
 use TCG\Voyager\Models\Setting;
+use App\Enums\RoleType;
 
 class CustomerController extends VoyagerBaseController
 {
@@ -24,7 +25,7 @@ class CustomerController extends VoyagerBaseController
             $user->name = $request->first_name . ' ' . $request->last_name;
             $user->email = $request->user;
             $user->password = Hash::make($request->password);
-            $user->role_id = 3; //customer
+            $user->role_id = RoleType::CUSTOMER; //customer
             $user->avatar = 'users/default.png';
             $user->save();
 
