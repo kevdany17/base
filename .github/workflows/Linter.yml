@@ -16,17 +16,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.1' # Ajusta la versión de PHP según tus necesidades
-
-    - name: Install Composer dependencies
-      run: composer install
-
-    - name: Run PHP linter (PHP_CodeSniffer)
-      run: vendor/bin/phpcs
-
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:

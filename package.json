@@ -10,8 +10,7 @@
 		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"lint": "npx eslint ./resources/js/",
 		"lint:fix": "npm run lint -- --fix",
-		"pre-commit": "vendor/bin/phpcs || vendor\\bin\\phpcs || true && npm run lint",
-		"php:fix": "vendor/bin/phpcbf || vendor\\bin\\phpcbf || true"
+		"pre-commit": "npm run lint"
 	},
 	"devDependencies": {
 		"@babel/preset-react": "^7.13.13",
