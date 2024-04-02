@@ -11,7 +11,7 @@ class UserController extends VoyagerUserController
 
     public function store(Request $request)
     {
-        $request = $request->merge(['api_token' => Str::random(60)]);
+        $request = $request->merge(['api_token' => Str::random(60), 'status' => 'active' ]);
         return parent::store($request);
     }
 }
