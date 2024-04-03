@@ -1,35 +1,48 @@
 <?php
+
 namespace App\Libraries\Notifications;
 
-use Impulzo\RestClientService\Libraries\Facade\RestClientFacade;
+use App\Enums\NotificationType;
+use App\Models\NotificationRecord;
+use App\Traits\LogErrorTrait;
+use Illuminate\Support\Facades\Mail as FacadesMail;
 
 class Mail
 {
-    protected $service;
+	use LogErrorTrait;
 
-    public function __construct(RestClientFacade $service)
-    {
-        $this->service = $service;
-    }
+	public function send($to, $subject, $body)
+	{
+		$month = date('m');
+		$year = date('Y');
 
-    public function send($to, $subject, $body)
-    {
-        $response = array('status' => 200);
-        try {
-            $headers = null;
-            $url = env('MAIL_IMPULZO_IP');
-            $client = env('MAIL_IMPULZO_CLIENT');
-            $fields = array(
-                'to' => $to,
-                'subject' => $subject,
-                'body' => $body,
-                'client' => $client
-            );
-            $response['data'] = $this->service->post($url, $fields, $headers);
-        } catch (\Exception $ex) {
-            $response['status'] = 500;
-            $response['message'] = $ex->getMessage();
-        }
-        return $response;
-    }
+		$response = [];
+
+		$notification = NotificationRecord::where('month', '=', $month)->where('year', '=', $year)
+			->where('type', '=', NotificationType::Mail)
+			->first();
+
+		if (!isset($notification)) {
+			$notification = NotificationRecord::create([
+				'type' => NotificationType::Mail,
+				'count' => 0,
+				'month' => $month,
+				'year' => $year
+			]);
+		}
+
+		FacadesMail::send([], [], function ($message) use ($to, $subject, $body) {
+			$message->to($to)
+				->subject($subject)
+				->setBody($body, 'text/html');
+		});
+
+		$notification->count += 1;
+		$notification->update();
+
+		$response['status'] = 204;
+		$response['message'] = 'Email enviado correctamente';
+
+		return $response;
+	}
 }

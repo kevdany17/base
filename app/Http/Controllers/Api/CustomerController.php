@@ -10,7 +10,7 @@ class CustomerController extends Controller
 {
     public function validateUser($email)
     {
-        $user = User::where('email', $email)->first();
+        $user = User::where('email','=',$email)->first();
         return response()->json([
             'data' => isset($user),
             'status' => 200
