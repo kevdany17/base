@@ -27,7 +27,8 @@ class Mail
 				'type' => NotificationType::Mail,
 				'count' => 0,
 				'month' => $month,
-				'year' => $year
+				'year' => $year,
+				'status' => 'Pendiente'
 			]);
 		}
 

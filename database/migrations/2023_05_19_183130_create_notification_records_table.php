@@ -19,6 +19,7 @@ class CreateNotificationRecordsTable extends Migration
             $table->integer('count');
             $table->integer('month');
             $table->integer('year');
+			$table->string('status',30)->nullable();
             $table->timestamps();
         });
     }
