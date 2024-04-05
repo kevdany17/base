@@ -19,12 +19,12 @@ class Mail
 		$response = [];
 
 		$notification = NotificationRecord::where('month', '=', $month)->where('year', '=', $year)
-			->where('type', '=', NotificationType::Mail)
+			->where('type', '=', NotificationType::MAIL)
 			->first();
 
 		if (!isset($notification)) {
 			$notification = NotificationRecord::create([
-				'type' => NotificationType::Mail,
+				'type' => NotificationType::MAIL,
 				'count' => 0,
 				'month' => $month,
 				'year' => $year,

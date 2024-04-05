@@ -3,7 +3,7 @@
 namespace App\Enums;
 
 enum NotificationType: string {
-	case Mail = 'mail';
+	case MAIL = 'mail';
 	case SMS = 'sms';
 	case WHATSAPP = 'WhatsApp';
 }
