@@ -3,7 +3,7 @@
 namespace App\Enums;
 
 enum ErrorLog: string {
-	case Error = 'error';
+	case ERROR = 'error';
 	case SQL = 'sql';
-	case Usage = 'usage';
+	case USAGE = 'usage';
 }

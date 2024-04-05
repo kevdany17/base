@@ -3,9 +3,9 @@
 namespace App\Dtos;
 
 class LogErrorDto {
-	public string $url;
-	public string $description;
+	public $url;
+	public $description;
 	public $request;
 	public $response;
-	public string $status;
+	public $status;
 }
