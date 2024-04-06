@@ -57,8 +57,8 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
 		DB::unprepared('DROP TRIGGER IF EXISTS insert_product_to_inventories_trigger');
 		DB::unprepared('DROP TRIGGER IF EXISTS insert_office_to_inventories_trigger');
+        Schema::dropIfExists('products');
     }
 }
