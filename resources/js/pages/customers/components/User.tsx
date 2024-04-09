@@ -6,11 +6,11 @@ const User = (props: IProps) => {
 
 	const nextStep = async (e: SyntheticEvent) => {
 		e.preventDefault();
-		if (props.values.id != 0 && (props.values.before_user != props.values.user)) {
+		if (props.values.before_user != props.values.user) {
 			await axios.get("/api/v1/customers/validate/" + (props.values.user as string),
 			).then(response => {
 				if (response.status == 200) {
-					if (response.data) {
+					if ((response.data as { data: boolean }).data === true) {
 						alert("Usuario ya registrado");
 					} else {
 						props.nextStep();

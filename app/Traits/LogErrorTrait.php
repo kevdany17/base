@@ -8,16 +8,12 @@ use App\Enums\ErrorLog;
 
 trait LogErrorTrait
 {
-    public function logError(LogErrorDto $dto){
-       $this->_create($dto, ErrorLog::Error);
-    }
-
-    public function logErrorSql(LogErrorDto $dto){
-		$this->_create($dto, ErrorLog::SQL);
+    public function logError(LogErrorDto $dto, ErrorLog $type){
+		$this->_create($dto, $type);
     }
 
     public function logUsage(LogErrorDto $dto){
-		$this->_create($dto, ErrorLog::Usage);
+		$this->_create($dto, ErrorLog::USAGE);
     }
 
 	private  function _create(LogErrorDto $dto, $type){

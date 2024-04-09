@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\InventoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
@@ -24,7 +24,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     //inventory
-    Route::get('/inventories/{id}/history', [HistoryController::class, 'historyByInventory'])
+    Route::get('/inventories/{id}/history', [InventoryController::class, 'historyByInventory'])
         ->name('inventories.history');
 });
 
