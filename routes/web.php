@@ -4,6 +4,7 @@ use App\Http\Controllers\InventoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,7 @@ use TCG\Voyager\Facades\Voyager;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{any}', [MainController::class, 'index'])->where('any', '^(?!admin).*$');
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -29,5 +28,3 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
