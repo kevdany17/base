@@ -41,10 +41,14 @@
 					<button type="submit" class="btn btn-block login-button">
 						<span class="signingin hidden"><span class="voyager-refresh"></span> {{ __('voyager::login.loggingin') }}...</span>
 						<span class="signin">{{ __('voyager::generic.login') }}</span>
+						<span class="icon voyager-power"></span>
 					</button>
 					<br>
-					<a href="{{ route('register') }}" class="btn btn-block login-button">Registarse</a>
+					<a href="{{ route('register') }}" class="btn btn-block login-button">Registarse
+						<span class="icon voyager-receipt"></span>
+					</a>
 				</div>
+
             </form>
 
             <div style="clear:both"></div>

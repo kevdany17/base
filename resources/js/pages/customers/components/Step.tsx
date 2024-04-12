@@ -1,22 +1,34 @@
 import React from "react";
 
 const Step = (props: { step: number }) => {
-
 	switch (props.step) {
 		case 1:
 			return (
 				<div className="tabs">
 					<div className="tab div__step--active">
-						<label> <i className="voyager-person"></i> Datos Personales</label>
+						<label>
+							{" "}
+							<i className="voyager-person"></i> Datos Personales
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-receipt"></i> Datos Fiscales</label>
+						<label>
+							{" "}
+							<i className="voyager-receipt"></i> Datos Fiscales
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-laptop"></i> Datos de Usuario</label>
+						<label>
+							{" "}
+							<i className="voyager-laptop"></i> Datos de Usuario
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-check"></i> Guardar información</label>
+						<label>
+							{" "}
+							<i className="voyager-check"></i> Guardar
+							información
+						</label>
 					</div>
 				</div>
 			);
@@ -24,16 +36,29 @@ const Step = (props: { step: number }) => {
 			return (
 				<div className="tabs">
 					<div className="tab">
-						<label> <i className="voyager-person"></i> Datos Personales</label>
+						<label>
+							{" "}
+							<i className="voyager-person"></i> Datos Personales
+						</label>
 					</div>
 					<div className="tab div__step--active">
-						<label> <i className="voyager-receipt"></i> Datos Fiscales</label>
+						<label>
+							{" "}
+							<i className="voyager-receipt"></i> Datos Fiscales
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-laptop"></i> Datos de Usuario</label>
+						<label>
+							{" "}
+							<i className="voyager-laptop"></i> Datos de Usuario
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-check"></i> Guardar información</label>
+						<label>
+							{" "}
+							<i className="voyager-check"></i> Guardar
+							información
+						</label>
 					</div>
 				</div>
 			);
@@ -41,16 +66,29 @@ const Step = (props: { step: number }) => {
 			return (
 				<div className="tabs">
 					<div className="tab">
-						<label> <i className="voyager-person"></i> Datos Personales</label>
+						<label>
+							{" "}
+							<i className="voyager-person"></i> Datos Personales
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-receipt"></i> Datos Fiscales</label>
+						<label>
+							{" "}
+							<i className="voyager-receipt"></i> Datos Fiscales
+						</label>
 					</div>
 					<div className="tab div__step--active">
-						<label> <i className="voyager-laptop"></i> Datos de Usuario</label>
+						<label>
+							{" "}
+							<i className="voyager-laptop"></i> Datos de Usuario
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-check"></i> Guardar información</label>
+						<label>
+							{" "}
+							<i className="voyager-check"></i> Guardar
+							información
+						</label>
 					</div>
 				</div>
 			);
@@ -58,23 +96,34 @@ const Step = (props: { step: number }) => {
 			return (
 				<div className="tabs">
 					<div className="tab">
-						<label> <i className="voyager-person"></i> Datos Personales</label>
+						<label>
+							{" "}
+							<i className="voyager-person"></i> Datos Personales
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-receipt"></i> Datos Fiscales</label>
+						<label>
+							{" "}
+							<i className="voyager-receipt"></i> Datos Fiscales
+						</label>
 					</div>
 					<div className="tab">
-						<label> <i className="voyager-laptop"></i> Datos de Usuario</label>
+						<label>
+							{" "}
+							<i className="voyager-laptop"></i> Datos de Usuario
+						</label>
 					</div>
 					<div className="tab div__step--active">
-						<label> <i className="voyager-check"></i> Guardar información</label>
+						<label>
+							{" "}
+							<i className="voyager-check"></i> Guardar
+							información
+						</label>
 					</div>
 				</div>
 			);
 		default:
-			return (
-				<div></div>
-			);
+			return <div></div>;
 	}
 };
 

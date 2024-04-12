@@ -41,7 +41,7 @@ const Customers = () => {
 				setState((prevState) => {
 					return { ...prevState, ...data };
 				});
-			} catch (error) { }
+			} catch (error) {}
 		}
 	}, []);
 
@@ -93,8 +93,7 @@ const Customers = () => {
 				)
 				.then((response) => {
 					if (response.status == 200) {
-						window.location.href =
-						"/admin/customers/";
+						window.location.href = "/admin/customers/";
 					}
 				})
 				.catch();
@@ -124,8 +123,7 @@ const Customers = () => {
 				)
 				.then((response) => {
 					if (response.status == 200) {
-						window.location.href =
-						"/admin/customers/";
+						window.location.href = "/admin/customers/";
 					}
 				})
 				.catch();

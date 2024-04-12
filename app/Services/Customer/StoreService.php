@@ -18,10 +18,12 @@ class StoreService
 	{
 		DB::beginTransaction();
 		try {
+			$faker = Faker\Factory::create();
+			// Create user account.
 			$user = User::create([
 				"name" => $request->first_name . ' ' . $request->last_name,
-				"email" => $request->user,
-				"password" => Hash::make($request->password),
+				"email" => $faker->email,
+				"password" => Hash::make($faker->password),
 				"role_id" => RoleType::CUSTOMER, //customer
 				"avatar" => 'users/default.png'
 			]);
@@ -38,6 +40,7 @@ class StoreService
 				'postal_code' => $request->postal_code,
 				'email' => $request->email,
 				'user_id' => $user->id,
+				'vendor_id' => \Auth::user()->id,
 			]);
 
 			DB::commit();
