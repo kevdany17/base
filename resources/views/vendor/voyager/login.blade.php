@@ -15,7 +15,7 @@
             @endif
             <p>Inicio de sesión:</p>
 
-            <form action="{{ route('voyager.login') }}" method="POST">
+            <form action="{{ route('admin.postlogin') }}" method="POST">
                 {{ csrf_field() }}
                 <div class="form-group form-group-default" id="emailGroup">
                     <label>Correo electronico</label>
@@ -37,11 +37,14 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-block login-button">
-                    <span class="signingin hidden"><span class="voyager-refresh"></span> {{ __('voyager::login.loggingin') }}...</span>
-                    <span class="signin">{{ __('voyager::generic.login') }}</span>
-                </button>
-
+                <div class="login-register-buttons">
+					<button type="submit" class="btn btn-block login-button">
+						<span class="signingin hidden"><span class="voyager-refresh"></span> {{ __('voyager::login.loggingin') }}...</span>
+						<span class="signin">{{ __('voyager::generic.login') }}</span>
+					</button>
+					<br>
+					<a href="{{ route('register') }}" class="btn btn-block login-button">Registarse</a>
+				</div>
             </form>
 
             <div style="clear:both"></div>
@@ -60,7 +63,24 @@
                 </div>
             @endif
 
+			@if(!empty($error))
+                <div class="alert alert-red">
+                    <ul class="list-unstyled">
+                        <li>{{ $error }}</li>
+                    </ul>
+                </div>
+            @endif
+
         </div> <!-- .login-container -->
+@endsection
+
+@section('pre_css')
+<style>
+ .login-register-buttons{
+	display: flex;
+	justify-content: space-between;
+ }
+</style>
 @endsection
 
 @section('post_js')
