@@ -739,6 +739,96 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2023-05-18 11:01:23',
                 'updated_at' => '2023-05-18 11:01:23',
             ),
+            80 => 
+            array (
+                'id' => 86,
+                'key' => 'browse_segments',
+                'table_name' => 'segments',
+                'display_name' => 'segmentos',
+                'created_at' => '2024-04-12 10:22:03',
+                'updated_at' => '2024-04-12 10:22:03',
+            ),
+            81 => 
+            array (
+                'id' => 87,
+                'key' => 'read_segments',
+                'table_name' => 'segments',
+                'display_name' => 'segmentos',
+                'created_at' => '2024-04-12 10:22:03',
+                'updated_at' => '2024-04-12 10:22:03',
+            ),
+            82 => 
+            array (
+                'id' => 88,
+                'key' => 'edit_segments',
+                'table_name' => 'segments',
+                'display_name' => 'segmentos',
+                'created_at' => '2024-04-12 10:22:03',
+                'updated_at' => '2024-04-12 10:22:03',
+            ),
+            83 => 
+            array (
+                'id' => 89,
+                'key' => 'add_segments',
+                'table_name' => 'segments',
+                'display_name' => 'segmentos',
+                'created_at' => '2024-04-12 10:22:03',
+                'updated_at' => '2024-04-12 10:22:03',
+            ),
+            84 => 
+            array (
+                'id' => 90,
+                'key' => 'delete_segments',
+                'table_name' => 'segments',
+                'display_name' => 'segmentos',
+                'created_at' => '2024-04-12 10:22:03',
+                'updated_at' => '2024-04-12 10:22:03',
+            ),
+            85 => 
+            array (
+                'id' => 91,
+                'key' => 'browse_memorandums',
+                'table_name' => 'memorandums',
+                'display_name' => 'minutas',
+                'created_at' => '2024-04-12 10:29:25',
+                'updated_at' => '2024-04-12 10:29:25',
+            ),
+            86 => 
+            array (
+                'id' => 92,
+                'key' => 'read_memorandums',
+                'table_name' => 'memorandums',
+                'display_name' => 'minutas',
+                'created_at' => '2024-04-12 10:29:25',
+                'updated_at' => '2024-04-12 10:29:25',
+            ),
+            87 => 
+            array (
+                'id' => 93,
+                'key' => 'edit_memorandums',
+                'table_name' => 'memorandums',
+                'display_name' => 'minutas',
+                'created_at' => '2024-04-12 10:29:25',
+                'updated_at' => '2024-04-12 10:29:25',
+            ),
+            88 => 
+            array (
+                'id' => 94,
+                'key' => 'add_memorandums',
+                'table_name' => 'memorandums',
+                'display_name' => 'minutas',
+                'created_at' => '2024-04-12 10:29:25',
+                'updated_at' => '2024-04-12 10:29:25',
+            ),
+            89 => 
+            array (
+                'id' => 95,
+                'key' => 'delete_memorandums',
+                'table_name' => 'memorandums',
+                'display_name' => 'minutas',
+                'created_at' => '2024-04-12 10:29:25',
+                'updated_at' => '2024-04-12 10:29:25',
+            ),
         ));
         
         
