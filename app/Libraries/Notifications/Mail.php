@@ -2,47 +2,33 @@
 
 namespace App\Libraries\Notifications;
 
-use App\Enums\NotificationType;
-use App\Models\NotificationRecord;
-use App\Traits\LogErrorTrait;
 use Illuminate\Support\Facades\Mail as FacadesMail;
+use App\Enums\NotificationType;
+use App\Dtos\EmailDto;
+use App\Traits\LogErrorTrait;
 
 class Mail
 {
 	use LogErrorTrait;
 
-	public function send($to, $subject, $body)
+	public static function send(EmailDto $dto)
 	{
-		$month = date('m');
-		$year = date('Y');
-
 		$response = [];
-
-		$notification = NotificationRecord::where('month', '=', $month)->where('year', '=', $year)
-			->where('type', '=', NotificationType::MAIL)
-			->first();
-
-		if (!isset($notification)) {
-			$notification = NotificationRecord::create([
-				'type' => NotificationType::MAIL,
-				'count' => 0,
-				'month' => $month,
-				'year' => $year,
-				'status' => 'Pendiente'
-			]);
+		$to = $dto->to;
+		$subject = $dto->subject;
+		$body = $dto->body;
+		try {
+			FacadesMail::send([], [], function ($message) use ($to, $subject, $body) {
+				$message->to($to)
+					->subject($subject)
+					->setBody($body, 'text/html');
+			});
+			$response['status'] = 204;
+			$response['message'] = 'Email enviado correctamente';
+		} catch (Exception $e) {
+			$response['status'] = 500;
+			$response['message'] = 'Error al enviar el correo: ' . $e->getMessage();
 		}
-
-		FacadesMail::send([], [], function ($message) use ($to, $subject, $body) {
-			$message->to($to)
-				->subject($subject)
-				->setBody($body, 'text/html');
-		});
-
-		$notification->count += 1;
-		$notification->update();
-
-		$response['status'] = 204;
-		$response['message'] = 'Email enviado correctamente';
 
 		return $response;
 	}
