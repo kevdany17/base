@@ -271,6 +271,42 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'whatsapp-templates',
                 'updated_at' => '2023-05-18 11:17:18',
             ),
+            14 => 
+            array (
+                'controller' => NULL,
+                'created_at' => '2024-11-11 21:56:30',
+                'description' => NULL,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'display_name_plural' => 'Mascotas',
+                'display_name_singular' => 'Mascota',
+                'generate_permissions' => 1,
+                'icon' => 'voyager-paw',
+                'id' => 16,
+                'model_name' => 'App\\Models\\Pet',
+                'name' => 'pets',
+                'policy_name' => NULL,
+                'server_side' => 0,
+                'slug' => 'pets',
+                'updated_at' => '2024-11-11 22:23:51',
+            ),
+            15 => 
+            array (
+                'controller' => NULL,
+                'created_at' => '2024-11-11 23:14:44',
+                'description' => NULL,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'display_name_plural' => 'Historial Médico',
+                'display_name_singular' => 'Historial Médico',
+                'generate_permissions' => 1,
+                'icon' => 'voyager-file-text',
+                'id' => 17,
+                'model_name' => 'App\\Models\\MedicalHistory',
+                'name' => 'medical_histories',
+                'policy_name' => NULL,
+                'server_side' => 0,
+                'slug' => 'medical-histories',
+                'updated_at' => '2024-11-11 23:15:51',
+            ),
         ));
         
         

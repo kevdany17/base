@@ -198,22 +198,6 @@ class MenuItemsTableSeeder extends Seeder
             11 => 
             array (
                 'color' => NULL,
-                'created_at' => '2023-04-02 19:53:08',
-                'icon_class' => 'voyager-list',
-                'id' => 12,
-                'menu_id' => 1,
-                'order' => 9,
-                'parameters' => NULL,
-                'parent_id' => NULL,
-                'route' => 'voyager.modules.index',
-                'target' => '_self',
-                'title' => 'Módulos',
-                'updated_at' => '2023-04-09 21:53:44',
-                'url' => '',
-            ),
-            12 => 
-            array (
-                'color' => NULL,
                 'created_at' => '2023-04-02 19:58:31',
                 'icon_class' => 'voyager-credit-cards',
                 'id' => 13,
@@ -227,23 +211,7 @@ class MenuItemsTableSeeder extends Seeder
                 'updated_at' => '2023-04-09 21:50:34',
                 'url' => '',
             ),
-            13 => 
-            array (
-                'color' => NULL,
-                'created_at' => '2023-04-09 21:15:08',
-                'icon_class' => 'voyager-categories',
-                'id' => 14,
-                'menu_id' => 1,
-                'order' => 1,
-                'parameters' => NULL,
-                'parent_id' => 20,
-                'route' => 'voyager.categories.index',
-                'target' => '_self',
-                'title' => 'Categorías',
-                'updated_at' => '2023-04-09 21:50:28',
-                'url' => '',
-            ),
-            14 => 
+            12 => 
             array (
                 'color' => NULL,
                 'created_at' => '2023-04-09 21:18:07',
@@ -259,23 +227,7 @@ class MenuItemsTableSeeder extends Seeder
                 'updated_at' => '2023-04-09 21:53:30',
                 'url' => '',
             ),
-            15 => 
-            array (
-                'color' => NULL,
-                'created_at' => '2023-04-09 21:19:51',
-                'icon_class' => 'voyager-params',
-                'id' => 16,
-                'menu_id' => 1,
-                'order' => 2,
-                'parameters' => NULL,
-                'parent_id' => 20,
-                'route' => 'voyager.units.index',
-                'target' => '_self',
-                'title' => 'Unidades de medida',
-                'updated_at' => '2023-04-09 21:50:32',
-                'url' => '',
-            ),
-            16 => 
+            13 => 
             array (
                 'color' => NULL,
                 'created_at' => '2023-04-09 21:27:15',
@@ -291,39 +243,7 @@ class MenuItemsTableSeeder extends Seeder
                 'updated_at' => '2023-04-09 21:53:33',
                 'url' => '',
             ),
-            17 => 
-            array (
-                'color' => NULL,
-                'created_at' => '2023-04-09 21:31:57',
-                'icon_class' => 'voyager-external',
-                'id' => 18,
-                'menu_id' => 1,
-                'order' => 4,
-                'parameters' => NULL,
-                'parent_id' => 20,
-                'route' => 'voyager.movement-types.index',
-                'target' => '_self',
-                'title' => 'Tipos de movimientos',
-                'updated_at' => '2023-04-09 21:50:39',
-                'url' => '',
-            ),
-            18 => 
-            array (
-                'color' => NULL,
-                'created_at' => '2023-04-09 21:40:15',
-                'icon_class' => 'voyager-data',
-                'id' => 19,
-                'menu_id' => 1,
-                'order' => 4,
-                'parameters' => NULL,
-                'parent_id' => 21,
-                'route' => 'voyager.inventories.index',
-                'target' => '_self',
-                'title' => 'Inventario de productos',
-                'updated_at' => '2023-04-09 21:53:36',
-                'url' => '',
-            ),
-            19 => 
+            14 => 
             array (
                 'color' => '#000000',
                 'created_at' => '2023-04-09 21:49:05',
@@ -339,23 +259,7 @@ class MenuItemsTableSeeder extends Seeder
                 'updated_at' => '2023-04-09 21:53:44',
                 'url' => '',
             ),
-            20 => 
-            array (
-                'color' => '#000000',
-                'created_at' => '2023-04-09 21:53:13',
-                'icon_class' => 'voyager-company',
-                'id' => 21,
-                'menu_id' => 1,
-                'order' => 7,
-                'parameters' => '',
-                'parent_id' => NULL,
-                'route' => NULL,
-                'target' => '_self',
-                'title' => 'Configuración',
-                'updated_at' => '2023-04-09 21:53:25',
-                'url' => '',
-            ),
-            21 => 
+            15 => 
             array (
                 'color' => '#000000',
                 'created_at' => '2023-04-12 23:37:46',
@@ -371,36 +275,36 @@ class MenuItemsTableSeeder extends Seeder
                 'updated_at' => '2023-04-13 21:22:32',
                 'url' => '',
             ),
-            22 => 
+            16 => 
             array (
                 'color' => NULL,
-                'created_at' => '2023-05-18 11:01:23',
-                'icon_class' => 'voyager-documentation',
-                'id' => 23,
+                'created_at' => '2024-11-11 21:56:30',
+                'icon_class' => 'voyager-paw',
+                'id' => 25,
                 'menu_id' => 1,
-                'order' => 11,
+                'order' => 13,
                 'parameters' => NULL,
                 'parent_id' => NULL,
-                'route' => 'voyager.whatsapp-templates.index',
+                'route' => 'voyager.pets.index',
                 'target' => '_self',
-                'title' => 'Templates de whatsapp',
-                'updated_at' => '2023-05-18 11:01:23',
+                'title' => 'Mascotas',
+                'updated_at' => '2024-11-11 21:56:30',
                 'url' => '',
             ),
-            23 => 
+            17 => 
             array (
                 'color' => NULL,
-                'created_at' => '2024-04-12 10:09:42',
-                'icon_class' => NULL,
-                'id' => 24,
+                'created_at' => '2024-11-11 23:14:44',
+                'icon_class' => 'voyager-file-text',
+                'id' => 26,
                 'menu_id' => 1,
-                'order' => 12,
+                'order' => 14,
                 'parameters' => NULL,
                 'parent_id' => NULL,
-                'route' => 'voyager.segments.index',
+                'route' => 'voyager.medical-histories.index',
                 'target' => '_self',
-                'title' => 'Segmentos',
-                'updated_at' => '2024-04-12 10:09:42',
+                'title' => 'Historial Médico',
+                'updated_at' => '2024-11-11 23:14:44',
                 'url' => '',
             ),
         ));
